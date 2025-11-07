@@ -1,0 +1,78 @@
+00:31:32 **** Incremental Build of configuration Debug for project ad9361 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/src/ad9361/ad9361.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DXILINX_PLATFORM -Wall -O0 -g3 -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\platform" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\ad9361" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\axi_core" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\include" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src" -c -fmessage-length=0 -MT"src/src/ad9361/ad9361.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ad9361_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/src/ad9361/ad9361.d" -MT"src/src/ad9361/ad9361.o" -o "src/src/ad9361/ad9361.o" "../src/src/ad9361/ad9361.c"
+In file included from ../src/src/ad9361/ad9361_util.h:51,
+                 from ../src/src/ad9361/ad9361.c:52:
+C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src/app_config.h:52: warning: "XILINX_PLATFORM" redefined
+ #define XILINX_PLATFORM
+ 
+<command-line>: note: this is the location of the previous definition
+'Finished building: ../src/src/ad9361/ad9361.c'
+' '
+'Building file: ../src/src/ad9361/ad9361_api.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DXILINX_PLATFORM -Wall -O0 -g3 -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\platform" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\ad9361" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\axi_core" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\include" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src" -c -fmessage-length=0 -MT"src/src/ad9361/ad9361_api.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ad9361_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/src/ad9361/ad9361_api.d" -MT"src/src/ad9361/ad9361_api.o" -o "src/src/ad9361/ad9361_api.o" "../src/src/ad9361/ad9361_api.c"
+In file included from ../src/src/ad9361/ad9361_util.h:51,
+                 from ../src/src/ad9361/ad9361_api.h:45,
+                 from ../src/src/ad9361/ad9361_api.c:44:
+C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src/app_config.h:52: warning: "XILINX_PLATFORM" redefined
+ #define XILINX_PLATFORM
+ 
+<command-line>: note: this is the location of the previous definition
+'Finished building: ../src/src/ad9361/ad9361_api.c'
+' '
+'Building file: ../src/src/ad9361/ad9361_conv.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DXILINX_PLATFORM -Wall -O0 -g3 -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\platform" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\ad9361" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\axi_core" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\include" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src" -c -fmessage-length=0 -MT"src/src/ad9361/ad9361_conv.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ad9361_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/src/ad9361/ad9361_conv.d" -MT"src/src/ad9361/ad9361_conv.o" -o "src/src/ad9361/ad9361_conv.o" "../src/src/ad9361/ad9361_conv.c"
+In file included from ../src/src/ad9361/ad9361_util.h:51,
+                 from ../src/src/ad9361/ad9361_conv.c:47:
+C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src/app_config.h:52: warning: "XILINX_PLATFORM" redefined
+ #define XILINX_PLATFORM
+ 
+<command-line>: note: this is the location of the previous definition
+'Finished building: ../src/src/ad9361/ad9361_conv.c'
+' '
+'Building file: ../src/src/ad9361/ad9361_util.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DXILINX_PLATFORM -Wall -O0 -g3 -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\platform" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\ad9361" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\axi_core" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\include" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src" -c -fmessage-length=0 -MT"src/src/ad9361/ad9361_util.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ad9361_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/src/ad9361/ad9361_util.d" -MT"src/src/ad9361/ad9361_util.o" -o "src/src/ad9361/ad9361_util.o" "../src/src/ad9361/ad9361_util.c"
+In file included from ../src/src/ad9361/ad9361_util.h:51,
+                 from ../src/src/ad9361/ad9361_util.c:43:
+C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src/app_config.h:52: warning: "XILINX_PLATFORM" redefined
+ #define XILINX_PLATFORM
+ 
+<command-line>: note: this is the location of the previous definition
+'Finished building: ../src/src/ad9361/ad9361_util.c'
+' '
+'Building file: ../src/src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -DXILINX_PLATFORM -Wall -O0 -g3 -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\platform" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\ad9361" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\axi_core" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src\include" -I"C:\Users\Elliot\Desktop\FPGA\FPGA2\hdl-hdl_2019_r2\projects\fmcomms2\zc706\fmcomms2_zc706.sdk\ad9361\src\src" -c -fmessage-length=0 -MT"src/src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ad9361_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/src/main.d" -MT"src/src/main.o" -o "src/src/main.o" "../src/src/main.c"
+In file included from ../src/src/main.c:45:
+../src/src/app_config.h:52: warning: "XILINX_PLATFORM" redefined
+ #define XILINX_PLATFORM
+ 
+<command-line>: note: this is the location of the previous definition
+../src/src/main.c: In function 'main':
+../src/src/main.c:726:54: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+    printf("Frame %d: RSSI before capture (symbol) = %d\n", frame, rssi.symbol);
+                                                     ~^            ~~~~~~~~~~~
+                                                     %ld
+'Finished building: ../src/src/main.c'
+' '
+'Building target: ad9361.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ad9361_bsp/ps7_cortexa9_0/lib -o "ad9361.elf"  ./src/src/util/util.o  ./src/src/platform/axi_io.o ./src/src/platform/delay.o ./src/src/platform/gpio.o ./src/src/platform/irq.o ./src/src/platform/spi.o ./src/src/platform/xilinx_gpio.o ./src/src/platform/xilinx_spi.o  ./src/src/axi_core/axi_adc_core.o ./src/src/axi_core/axi_dac_core.o ./src/src/axi_core/axi_dmac.o  ./src/src/ad9361/ad9361.o ./src/src/ad9361/ad9361_api.o ./src/src/ad9361/ad9361_conv.o ./src/src/ad9361/ad9361_util.o  ./src/src/main.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ad9361.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ad9361.elf  |tee "ad9361.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 252240	   4864	  23344	 280448	  44780	ad9361.elf
+'Finished building: ad9361.elf.size'
+' '
+
+00:31:44 Build Finished (took 11s.824ms)
+

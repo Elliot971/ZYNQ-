@@ -1,0 +1,131 @@
+# ZC706 + AD9361 系统配置文件
+# ============================================
+
+# AD9361 射频配置
+ad9361:
+  # RX1 接收配置
+  rx1:
+    frequency: 2400000000        # 中心频率 (Hz) = 2.4 GHz
+    sampling_rate: 2000000       # 采样率 (Hz) = 2 MHz
+    bandwidth: 5000000           # 带宽 (Hz) = 5 MHz
+    gain_mode: manual            # 增益模式: manual, fast_attack, slow_attack, hybrid
+    gain: 40                     # 手动增益 (dB), 范围: 0-73
+    quadrature_tracking: true    # 正交校准
+    rf_dc_offset_tracking: true  # 射频直流偏置校准
+    bb_dc_offset_tracking: true  # 基带直流偏置校准
+    
+  # TX2 发送配置
+  tx2:
+    frequency: 2400000000        # 中心频率 (Hz) = 2.4 GHz
+    sampling_rate: 1000000       # 采样率 (Hz) = 1 MHz
+    bandwidth: 2000000           # 带宽 (Hz) = 2 MHz
+    attenuation: -10             # 衰减 (dBm), 范围: -89.75 ~ 0
+
+# IIO 设备配置
+iio:
+  uri: "local:"                  # IIO设备URI
+                                 # - "local:" 本地设备
+                                 # - "ip:192.168.1.10" 网络设备
+  buffer_size: 2560              # 缓冲区大小 (采样点数)
+  timeout: 1000                  # 超时时间 (ms)
+
+# 算法推理配置
+inference:
+  model_path: "physics_inspired_model_best.pth"  # 模型文件路径
+  device: "cpu"                  # 计算设备: cpu, cuda
+  batch_size: 1                  # 批大小 (固定为1)
+  
+  # 热敏电阻参数 (NCP15XM331J03RC)
+  thermistor:
+    Z0: 50.0                     # 特征阻抗 (Ω)
+    R25: 330.0                   # 25°C时的阻值 (Ω)
+    beta: 3500.0                 # B常数 (K)
+    temp_range: [-40, 150]       # 有效温度范围 (°C)
+
+# 输出协议配置
+output:
+  protocol: "hex"                # 协议类型: hex, binary
+  
+  # Hex协议参数
+  hex:
+    frame_header: [0xAA, 0x55]   # 帧头 (2字节)
+    temp_scale: 10               # 温度缩放因子 (温度×10)
+    crc_enable: true             # 启用CRC校验
+    
+  # Binary协议参数
+  binary:
+    frame_header: [0xAA, 0x55]   # 帧头 (2字节)
+    include_gamma: true          # 包含反射系数
+    include_channel: false       # 包含信道幅度
+    crc_enable: true             # 启用CRC校验
+
+# TX2调制参数
+modulation:
+  type: "BPSK"                   # 调制类型: BPSK, QPSK
+  samples_per_symbol: 8          # 每符号采样点数
+  amplitude: 1000                # 信号幅度 (int16范围)
+
+# 系统运行配置
+system:
+  mode: "realtime"               # 运行模式: single, realtime
+  interval: 0.05                 # 实时模式处理间隔 (s)
+  duration: null                 # 运行时长 (s), null表示无限运行
+  enable_tx: true                # 是否启用TX2发送
+  
+  # 日志配置
+  logging:
+    enable: true                 # 启用日志
+    level: "INFO"                # 日志级别: DEBUG, INFO, WARNING, ERROR
+    file: "zc706_system.log"     # 日志文件路径
+    console: true                # 输出到控制台
+    
+  # 性能监控
+  monitoring:
+    enable: true                 # 启用性能监控
+    interval: 10                 # 统计输出间隔 (帧数)
+    save_stats: true             # 保存统计数据
+    stats_file: "performance_stats.csv"
+
+# 数据采集配置
+data_acquisition:
+  frame_structure:
+    num_frames: 5                # 总帧数
+    num_pilots: 4                # 导频帧数
+    num_data: 1                  # 数据帧数
+    samples_per_frame: 64        # 每帧采样点数
+    num_antennas: 4              # 接收天线数
+    
+  preprocessing:
+    normalization: true          # 启用归一化
+    adc_bits: 12                 # ADC位数
+    adc_scale: 2048              # ADC缩放因子 (2^(bits-1))
+    dc_removal: false            # 移除直流分量
+    
+# 故障处理配置
+fault_handling:
+  retry_on_error: true           # 出错时重试
+  max_retries: 3                 # 最大重试次数
+  retry_delay: 1.0               # 重试延迟 (s)
+  
+  # 异常温度处理
+  temperature_validation:
+    enable: true                 # 启用温度验证
+    min_temp: -40                # 最小有效温度 (°C)
+    max_temp: 150                # 最大有效温度 (°C)
+    outlier_threshold: 3.0       # 离群点阈值 (标准差倍数)
+
+# 调试配置
+debug:
+  enable: false                  # 启用调试模式
+  save_raw_iq: false             # 保存原始I/Q数据
+  save_inference_output: false   # 保存推理输出
+  output_dir: "debug_output"     # 调试输出目录
+  verbose: false                 # 详细输出
+
+# 备注
+# ============================================
+# 1. 修改配置后需要重启系统
+# 2. RX/TX频率必须在AD9361支持范围内 (70 MHz ~ 6 GHz)
+# 3. 采样率范围: 2.083 MSPS ~ 61.44 MSPS
+# 4. 增益范围: 0-73 dB (1 dB步进)
+

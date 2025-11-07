@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Oct 25 13:51:49 2025
+# Process ID: 26596
+# Current directory: C:/Users/Elliot/Desktop/FPGA/hdl-hdl_2019_r2/projects/fmcomms2/zc706
+# Command line: vivado.exe -mode batch -source system_project.tcl
+# Log file: C:/Users/Elliot/Desktop/FPGA/hdl-hdl_2019_r2/projects/fmcomms2/zc706/vivado.log
+# Journal file: C:/Users/Elliot/Desktop/FPGA/hdl-hdl_2019_r2/projects/fmcomms2/zc706\vivado.jou
+#-----------------------------------------------------------
+source system_project.tcl

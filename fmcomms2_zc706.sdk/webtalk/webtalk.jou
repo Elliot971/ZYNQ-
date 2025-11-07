@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Tue Oct 28 23:38:15 2025
+# Process ID: 36424
+# Current directory: C:/Users/Elliot/Desktop/FPGA/FPGA2/hdl-hdl_2019_r2/projects/fmcomms2/zc706/fmcomms2_zc706.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Elliot/Desktop/FPGA/FPGA2/hdl-hdl_2019_r2/projects/fmcomms2/zc706/fmcomms2_zc706.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Elliot/Desktop/FPGA/FPGA2/hdl-hdl_2019_r2/projects/fmcomms2/zc706/fmcomms2_zc706.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
